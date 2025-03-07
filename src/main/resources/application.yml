@@ -1,0 +1,19 @@
+server:
+  port: 8071
+
+spring:
+  application:
+    name: configserver
+  profiles:
+    #active: native --> When using Classpath or File based
+  active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri:
+          default-label: main
+          timout: 5
+        #native:
+        #  search-locations: "classpath:/config"
+
